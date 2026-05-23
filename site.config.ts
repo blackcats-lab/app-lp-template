@@ -37,7 +37,7 @@ export const siteConfig = {
     // テーマモード: 'light' | 'dark'
     mode: 'light' as 'light' | 'dark',
     // ヒーローセクション背景のスタイル: 'aurora' | 'grid' | 'mesh' | 'plain'
-    heroStyle: 'aurora' as 'aurora' | 'grid' | 'mesh' | 'plain',
+    heroStyle: 'mesh' as 'aurora' | 'grid' | 'mesh' | 'plain',
   },
 
   // ─────────────────────────────────────────────
