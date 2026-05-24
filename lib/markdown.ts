@@ -31,6 +31,7 @@ export async function getMarkdownContent(slug: string): Promise<{
     .replace(/\{governingLaw\}/g, siteConfig.legal.governingLaw)
     .replace(/\{jurisdiction\}/g, siteConfig.legal.jurisdiction)
     .replace(/\{contactEmail\}/g, siteConfig.contact.email)
+    .replace(/\{privacyEmail\}/g, siteConfig.contact.privacyEmail || siteConfig.contact.email)
     .replace(/\{appUrl\}/g, siteConfig.app.url);
 
   const processed = await remark().use(html).process(replaced);
