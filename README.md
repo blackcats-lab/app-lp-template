@@ -32,15 +32,35 @@
 - npm / yarn / pnpm のいずれか
 - AIコーディングエージェント（Claude Code、Cursor、Codex、Cline、Copilot Workspace など）
 
-### 1. テンプレートを取得
+### 1. テンプレートから自分のリポジトリを作成
+
+このリポジトリの GitHub ページ右上の **「Use this template」** → **「Create a new repository」** をクリックして、あなたの GitHub アカウントに新しいリポジトリを作成してください。
+
+> 「Use this template」を使うと、コミット履歴がリセットされ、新しいリポジトリの `origin` があなた自身のリポジトリを指すため、そのまま `git push` できます。`git clone` でテンプレートを直接コピーすると `origin` がテンプレリポジトリのままになり、後の push 時に混乱の元になるため非推奨です。
+
+作成したリポジトリをローカルにクローンして、依存をインストールします。
 
 ```bash
-# GitHub Template として配布されている場合は "Use this template" ボタンを使ってください。
-# あるいはローカルにクローンして
-git clone <this-repo> my-app-lp
-cd my-app-lp
+git clone https://github.com/<あなたのユーザー名>/<新しいリポジトリ名>.git
+cd <新しいリポジトリ名>
 npm install
 ```
+
+<details>
+<summary>GitHub Template として配布されていない場合（コードのみを入手したいとき）</summary>
+
+```bash
+git clone https://github.com/blackcats-lab/app-lp-template.git my-app-lp
+cd my-app-lp
+
+# origin をテンプレリポジトリから自分のリポジトリに付け替える
+git remote remove origin
+git remote add origin https://github.com/<あなたのユーザー名>/<新しいリポジトリ名>.git
+
+npm install
+```
+
+</details>
 
 ### 2. AIエージェントにカスタマイズを依頼
 
