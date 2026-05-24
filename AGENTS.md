@@ -64,7 +64,7 @@
 7. **`steps`**: 「ダウンロード → セットアップ → 利用開始」の3ステップ。Webアプリなら「アクセス → 登録 → 利用開始」に
 8. **`pricing.plans`**: 利用者の指定に応じて。**有料プランがない場合、配列を1要素（Freeのみ）にしても2要素にしてもOK**。`highlighted: true` は1つだけにすること
 9. **`faq.categories`**: 最低3カテゴリ、各2問以上を目安に。利用者のアプリの特性に合わせて、想定される質問を生成してください
-10. **`contact`**: `email` は必須。`endpoint` は空文字でOK（mailto: にフォールバックします）
+10. **`contact`**: `email` は必須。`privacyEmail` はプライバシーポリシー第12条で使用（空文字なら `email` が使われます）。`endpoint` は空文字でOK（mailto: にフォールバックします）
 11. **`legal`**: `operatorName`、`operatorType`、`lastUpdated` は必ず更新。住所は個人開発者なら空文字で構いません
 
 ### Step 3. 配色を調整する（必要に応じて）
