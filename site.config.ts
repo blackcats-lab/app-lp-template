@@ -254,6 +254,7 @@ export const siteConfig = {
     subtitle:
       'ご質問・ご意見・不具合のご報告など、お気軽にお寄せください。\n通常2〜3営業日以内にご返信いたします。',
     email: 'support@your-app.example.com',           // 表示用 (フォームPOST先は別途設定)
+    privacyEmail: 'privacy@your-app.example.com',    // プライバシーポリシー専用窓口 (空文字なら email を使用)
     // 問い合わせフォームのカテゴリ
     categories: [
       'サービスに関するご質問',
