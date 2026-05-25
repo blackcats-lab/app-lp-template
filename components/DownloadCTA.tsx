@@ -67,8 +67,9 @@ export function DownloadCTA() {
                 )}
               </div>
             ) : (
-              <p className="mt-10 text-sm opacity-60">
-                ※ site.config.ts の store にストアURLを設定してください
+              /* ストアURL未設定時のフォールバック表示。本番リリース時は site.config.ts の store に URL を設定してください */
+              <p className="mt-10 text-sm opacity-80">
+                近日リリース予定。もうしばらくお待ちください。
               </p>
             )}
           </div>
